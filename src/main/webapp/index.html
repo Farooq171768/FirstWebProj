@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.container{
+		border:1px solid black;
+		width:40%;
+		margin:auto;
+		padding:20px;
+	}
+</style>
+</head>
+<body>
+	<!-- <h1>Welcome to Servlets and JSP</h1>
+<h2><a href="first">First Servlet</a> </h2>
+<h2><a href="second">Second Servlet</a> </h2>
+<h2><a href="myservlet">MyServlet</a> </h2> -->
+	<div class="container">
+		<h1>My Form</h1>
+		<form class="form" action="RegisterServlet" method="post">
+			<table>
+				<tr>
+					<td>Enter your name:</td>
+					<td><input type="text" name="user_name"
+						placeholder="Enter here" /></td>
+				</tr>
+				<tr>
+					<td>Enter your Password:</td>
+					<td><input type="password" name="user_password"
+						placeholder="Enter Password here" /></td>
+				</tr>
+				<tr>
+					<td>Enter your Email:</td>
+					<td><input type="email" name="user_email"
+						placeholder="Enter Email here" /></td>
+				</tr>
+				<tr>
+					<td>Select Gender</td>
+					<td><input type="radio" name="user_gender" value="male" />Male
+						&nbsp;&nbsp; <input type="radio" name="user_gender" value="female" />Female
+					</td>
+				</tr>
+				<tr>
+					<td>Select your choice</td>
+					<td><select name="user_course">
+							<option value="Java">Java</option>
+							<option value="PHP">PHP</option>
+							<option value="Python">Python</option>
+							<option value="Android">Android</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" value="checked" name="condition" />
+					</td>
+					<td>Agree to the terms and conditions</td>
+				</tr>
+				<tr>
+					<td>
+						<button type="submit">Register</button>
+						<button type="reset">Reset</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
