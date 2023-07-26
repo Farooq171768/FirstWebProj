@@ -3,6 +3,7 @@ package cgg.servlets;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -31,9 +32,24 @@ public class RegisterServlet extends HttpServlet {
 			out.println("<h2>Email:  "+email+"</h2>");
 			out.println("<h2>Gender:  "+gender+"</h2>");
 			out.println("<h2>Course:  "+course+"</h2>");
+			
+			
+			//
+			//jdbc
+			//
+			RequestDispatcher rd = req.getRequestDispatcher("SuccessServlet");
+			rd.forward(req, resp);
 		}
+		
 		else {
 			out.println("You have not accepted terms and conditions");
+			
+			//include the output of index.html(form)
+			//Hence get the object of requestDispatcher
+			
+			RequestDispatcher rs = req.getRequestDispatcher("index.html");
+			rs.include(req, resp);
+			
 		}
 	}
 }
